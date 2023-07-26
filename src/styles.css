@@ -1,0 +1,64 @@
+/* styles.css */
+
+/* Container for the main content */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Styles for the message at the top */
+.message {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Styles for the box that displays the number */
+.number-box {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+/* Styles for the text inside the box when the number is 3 */
+.number-box.text-not-bad {
+  position: relative;
+}
+
+.text-not-bad::after {
+  content: "Not bad";
+  position: absolute;
+  bottom: -20px;
+  font-size: 14px;
+  color: #666;
+}
+
+/* Styles for the up and down arrow buttons */
+.arrow-button {
+  cursor: pointer;
+  font-size: 24px;
+  margin: 4px;
+}
+
+/* Styles for the submit button */
+.submit-button {
+  cursor: pointer;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+}
+
+.submit-button:hover {
+  background-color: #0056b3;
+}

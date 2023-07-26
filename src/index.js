@@ -1,7 +1,7 @@
+// index.js
 import React from "react";
 import ReactDOM from "react-dom";
-import App from './components/App.jsx';
+import LandingPage from './components/LandingPage.jsx';
+import './global.css'; // Import the global CSS file
 
-
-
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<LandingPage />, document.getElementById('root'));
