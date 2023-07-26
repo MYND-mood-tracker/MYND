@@ -16,8 +16,9 @@
 
 /* Styles for the message at the top */
 .message {
+  font-family: 'Sintony', sans-serif;
   font-size: 60px;
-  font-weight: bold;
+  font-weight: lighter;
   margin-bottom: 20px;
 }
 
@@ -49,6 +50,27 @@
   position: relative;
 }
 
+.number-text {
+  /* Position the number text inside the number box */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Sintony', sans-serif;
+  font-size: 80px;
+  text-shadow: -2px -2px 0 black, 2px -2px 0 black, -2px 2px 0 black, 2px 2px 0 black; /* Add this line to create a black outline around the number */
+  padding: 10px; 
+}
+
+.text-message {
+  font-family: 'Sintony', sans-serif;
+  margin-top: 10px;
+  font-size: 30px;
+  text-align: center;
+  font-weight: lighter;
+}
+
+
 .text-not-bad::after {
   content: "Not bad";
   position: absolute;
@@ -72,20 +94,46 @@
   cursor: pointer;
   font-size: 24px;
   margin: 4px;
+  color: rgb(102,153,204);
 }
 
 /* Styles for the submit button */
 .submit-button {
   cursor: pointer;
-  margin-top: 20px;
-  padding: 10px 20px;
+  margin-top: 120px;
+  padding: 20px 40px;
   background-color: #007bff;
   color: white;
   border: none;
   border-radius: 8px;
-  font-size: 18px;
+  font-size: 24px;
 }
 
 .submit-button:hover {
   background-color: #0056b3;
+}
+
+.number-box.number-1 {
+  background-color: rgb(191,79,81);
+  color: white;
+}
+
+.number-box.number-2 {
+  background-color: rgb(255,160,122);
+  color: white;
+}
+
+.number-box.number-3 {
+  background-color: rgb(239,204,0);
+  color: white;
+}
+
+.number-box.number-4 {
+  background-color: rgb(143,188,143);
+  color: white;
+}
+
+.number-box.number-5 {
+  background-color: rgb(155,196,226);
+  color: white;
 }
