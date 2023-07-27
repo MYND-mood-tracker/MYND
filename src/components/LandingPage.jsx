@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom'; // Import useNavigate instead of useHistory
 import '../styles/styles.css';
 
 const LandingPage = () => {
   const [number, setNumber] = useState('');
+  const navigate = useNavigate(); // Use useNavigate hook for navigation
 
   const handleNumberChange = (increment) => {
     setNumber((prevNumber) => {
@@ -12,6 +13,28 @@ const LandingPage = () => {
       const newNumber = Number(prevNumber) - increment;
       return Math.min(Math.max(newNumber, 1), 5).toString();
     });
+  };
+
+  const handleSubmit = () => {
+    // Make a POST request to your backend API to save the selectedNumber
+    fetch('/api/selected-number', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ number }),
+    })
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error('Failed to save selected number');
+        }
+        console.log('Selected number saved successfully');
+        // Use navigate to navigate to the ResultPage after saving the selected number
+        navigate(`/result/${number}`);
+      })
+      .catch((error) => {
+        console.error('Error saving selected number:', error);
+      });
   };
 
   return (
@@ -30,7 +53,8 @@ const LandingPage = () => {
           </span>
         </div>
       </div>
-      <Link to={`/result/${number}`} className="submit-button">
+      {/* Use Link to navigate to ResultPage */}
+      <Link to={`/result/${number}`} className="submit-button" onClick={handleSubmit}>
         Submit
       </Link>
     </div>

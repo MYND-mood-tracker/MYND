@@ -1,5 +1,5 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import '../styles/styles.css';
 import '../styles/result.css';
 import positiveMessages from '../utils/positiveMessages.js';
@@ -16,16 +16,6 @@ const ResultPage = () => {
 
   const positiveMessage = getRandomPositiveMessage(selectedNumber);
 
-
-  const MoodButtons = () => {
-    return (
-      <div className="mood-buttons">
-        <button className="weekly-button">Weekly Moods</button>
-        <button className="monthly-button">Monthly Moods</button>
-      </div>
-    );
-  };
-
   return (
     <div className="result-container">
       <div className="result-message">So your day today was a...</div>
@@ -33,7 +23,12 @@ const ResultPage = () => {
         <div className="selected-number">{selectedNumber}</div>
       </div>
       <div className="positive-message">{positiveMessage}</div>
-      <MoodButtons />
+      <div className="mood-buttons">
+        <Link to="/weekly-moods" className="weekly-button">
+          Weekly Moods
+        </Link>
+        <button className="monthly-button">Monthly Moods</button>
+      </div>
     </div>
   );
 };
