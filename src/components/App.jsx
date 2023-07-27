@@ -1,18 +1,16 @@
 import React from 'react';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import LandingPage from './components/LandingPage.jsx';
-import ResultPage from './components/ResultPage.jsx';
+import { Routes, Route } from 'react-router-dom'; 
+import LandingPage from './LandingPage.jsx'; 
+import ResultPage from './ResultPage.jsx'; 
 
 const App = () => {
   return (
     <div>
       <h1>MYND</h1>
-      <BrowserRouter>
-        <Switch>
-          <Route exact path="/" component={LandingPage} />
-          <Route path="/result/:selectedNumber" component={ResultPage} />
-        </Switch>
-      </BrowserRouter>
+      <Routes> 
+        <Route path="/" element={<LandingPage />} /> 
+        <Route path="/result/:selectedNumber" element={<ResultPage />} /> 
+      </Routes>
     </div>
   );
 };

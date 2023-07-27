@@ -4,25 +4,14 @@ import '../styles/styles.css';
 
 const LandingPage = () => {
   const [number, setNumber] = useState('');
-  const [text, setText] = useState('');
 
   const handleNumberChange = (increment) => {
     setNumber((prevNumber) => {
       if (prevNumber === '' && increment === -1) return '5';
       if (prevNumber === '' && increment === 1) return '1';
       const newNumber = Number(prevNumber) - increment;
-      const clampedNumber = Math.min(Math.max(newNumber, 1), 5).toString();
-      setText(textMessages[clampedNumber]); // Update text based on clampedNumber
-      return clampedNumber;
+      return Math.min(Math.max(newNumber, 1), 5).toString();
     });
-  };
-
-  const textMessages = {
-    '1': "Terrible",
-    '2': "Bad",
-    '3': "Not bad",
-    '4': "Good",
-    '5': "Fantastic",
   };
 
   return (
@@ -41,7 +30,6 @@ const LandingPage = () => {
           </span>
         </div>
       </div>
-      <div className="text-message">{text}</div>
       <Link to={`/result/${number}`} className="submit-button">
         Submit
       </Link>
