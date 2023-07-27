@@ -1,0 +1,39 @@
+.result-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+  font-family: 'Sintony', sans-serif;
+}
+
+.result-message {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  font-size: 64px;
+  font-weight: bold;
+  color: white;
+}
+
+.selected-number {
+  font-size: 64px;
+}
+
+.positive-message {
+  font-size: 30px;
+  margin-top: 20px;
+  text-align: center;
+}

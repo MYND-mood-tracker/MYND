@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import '../styles.css';
+import { Link } from 'react-router-dom';
+import '../styles/styles.css';
 
 const LandingPage = () => {
   const [number, setNumber] = useState('');
@@ -14,7 +15,7 @@ const LandingPage = () => {
       setText(textMessages[clampedNumber]); // Update text based on clampedNumber
       return clampedNumber;
     });
-  }; 
+  };
 
   const textMessages = {
     '1': "Terrible",
@@ -29,7 +30,7 @@ const LandingPage = () => {
       <div className="message-wrapper">
         <div className="message">Hey! How was your day?</div>
       </div>
-      <div className={`number-box number-${number}`}> 
+      <div className={`number-box number-${number}`}>
         <div className="number-text">{number}</div>
         <div className="arrow-buttons">
           <span className="arrow-button" onClick={() => handleNumberChange(-1)}>
@@ -41,7 +42,9 @@ const LandingPage = () => {
         </div>
       </div>
       <div className="text-message">{text}</div>
-      <button className="submit-button">Submit</button>
+      <Link to={`/result/${number}`} className="submit-button">
+        Submit
+      </Link>
     </div>
   );
 };
