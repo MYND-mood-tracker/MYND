@@ -4,5 +4,8 @@ body {
   align-items: center;
   height: 100vh;
   margin: 0;
+  background-image: url('/images/MYND\ background.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
   background-color: #f0f0f0;
 }

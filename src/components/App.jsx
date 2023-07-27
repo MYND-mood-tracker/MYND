@@ -6,7 +6,7 @@ import ResultPage from './ResultPage.jsx';
 const App = () => {
   return (
     <div>
-      <h1>MYND</h1>
+      <h1></h1>
       <Routes> 
         <Route path="/" element={<LandingPage />} /> 
         <Route path="/result/:selectedNumber" element={<ResultPage />} /> 

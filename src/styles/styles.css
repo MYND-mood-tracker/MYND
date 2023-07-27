@@ -7,10 +7,12 @@
   justify-content: center;
   align-items: center;
   background-color: #f0f0f0;
+  min-height: 100vh;
 }
 
 .message-wrapper {
   height: 180px;
+  padding-top: 120px;
 }
 
 
@@ -43,6 +45,7 @@
   font-size: 88px;
   font-weight: bold;
   position: relative;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4)
 }
 
 /* Styles for the text inside the box when the number is 3 */
@@ -107,6 +110,7 @@
   border: none;
   border-radius: 8px;
   font-size: 24px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2)
 }
 
 .submit-button:hover {
