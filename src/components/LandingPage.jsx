@@ -4,7 +4,7 @@ import '../styles/styles.css';
 
 const LandingPage = () => {
   const [number, setNumber] = useState('');
-  const navigate = useNavigate(); // Use useNavigate hook for navigation
+  const navigate = useNavigate(); 
 
   const handleNumberChange = (increment) => {
     setNumber((prevNumber) => {
@@ -16,7 +16,6 @@ const LandingPage = () => {
   };
 
   const handleSubmit = () => {
-    // Make a POST request to your backend API to save the selectedNumber
     fetch('/api/selected-number', {
       method: 'POST',
       headers: {
@@ -53,7 +52,6 @@ const LandingPage = () => {
           </span>
         </div>
       </div>
-      {/* Use Link to navigate to ResultPage */}
       <Link to={`/result/${number}`} className="submit-button" onClick={handleSubmit}>
         Submit
       </Link>
