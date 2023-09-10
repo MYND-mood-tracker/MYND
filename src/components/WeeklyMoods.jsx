@@ -63,8 +63,6 @@ const WeeklyMoods = () => {
     <div className="weekly-moods-container">
       {/* Week Calendar */}
       <div className="week-calendar">
-        {/* Render each day of the week */}
-        {/* You can adjust the days and date format based on your requirements */}
         {renderWeeklyMoodsData()}
       </div>
 
@@ -75,11 +73,7 @@ const WeeklyMoods = () => {
           <div className="number">{calculateAverageMood()}</div>
         </div>
       </div>
-
-      {/* Positive message */}
       <div className="positive-message">
-        {/* You can use positiveMessages array to display a random positive message */}
-        {/* Make sure to import and use the positiveMessages array */}
       </div>
     </div>
   );
