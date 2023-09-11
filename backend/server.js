@@ -48,7 +48,7 @@ const SelectedNumber = mongoose.model('SelectedNumber', selectedNumberSchema);
 
 app.use(express.json());
 app.use(cors({
-  origin: 'http://localhost:8080', // Update with your React app's origin
+  origin: 'http://localhost:8080', 
 }));
 
 app.post('/api/selected-number', async (req, res) => {
