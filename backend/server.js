@@ -54,6 +54,9 @@ app.use(cors({
 app.post('/api/selected-number', async (req, res) => {
   try {
     const { number } = req.body;
+    if (!number) {
+      return res.status(400).json({ error: 'Number is required' });
+    }
     const selectedNumber = new SelectedNumber({ number });
     await selectedNumber.save();
     res.status(201).json({ message: 'Selected number saved successfully' });
@@ -62,6 +65,7 @@ app.post('/api/selected-number', async (req, res) => {
     res.status(500).json({ error: 'Failed to save selected number' });
   }
 });
+
 
 app.get('/api/weekly-moods', async (req, res) => {
   try {
