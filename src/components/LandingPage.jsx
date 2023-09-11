@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom'; // Import useNavigate instead of useHistory
+import { Link, useNavigate } from 'react-router-dom'; 
 import '../styles/styles.css';
 
 const LandingPage = () => {
@@ -28,7 +28,6 @@ const LandingPage = () => {
           throw new Error('Failed to save selected number');
         }
         console.log('Selected number saved successfully');
-        // Use navigate to navigate to the ResultPage after saving the selected number
         navigate(`/result/${number}`);
       })
       .catch((error) => {
