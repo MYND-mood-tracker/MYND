@@ -79,7 +79,7 @@ app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
 });
 
-// New route for calculating weekly moods
+// route for calculating weekly moods
 app.get('/weekly-moods', async (req, res) => {
   try {
     const weeklyMoodsData = await SelectedNumber.find();
