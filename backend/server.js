@@ -89,7 +89,7 @@ app.get('/weekly-moods', async (req, res) => {
     const weeklyMoodsData = await SelectedNumber.find();
     const daysOfWeek = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
 
-    // Initialize an empty object to store the data for each day of the week
+    // Initialize empty object to store the data for each day of the week
     const weeklyMoods = {};
     daysOfWeek.forEach((day) => {
       weeklyMoods[day] = { number: 'No data' };

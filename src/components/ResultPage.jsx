@@ -1,3 +1,4 @@
+//Dependencies
 import React from 'react';
 import { Link, useParams } from 'react-router-dom';
 import '../styles/styles.css';
@@ -7,6 +8,8 @@ import positiveMessages from '../utils/positiveMessages.js';
 const ResultPage = () => {
   const { selectedNumber } = useParams();
   console.log('selectedNumber:', selectedNumber);
+
+  const handleMessage = false;
 
   const getRandomPositiveMessage = (selectedNumber) => {
     const messages = positiveMessages[selectedNumber];

@@ -1,3 +1,4 @@
+//Dependencies
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom'; 
 import '../styles/styles.css';
@@ -14,6 +15,8 @@ const LandingPage = () => {
       return Math.min(Math.max(newNumber, 1), 5).toString();
     });
   };
+
+  const handleMood = false;
 
   const handleSubmit = () => {
     fetch('/api/selected-number', {
