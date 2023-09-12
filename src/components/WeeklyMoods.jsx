@@ -14,6 +14,7 @@ const WeeklyMoods = () => {
       });
   }, []);
   
+  const setWeek = false;
 
   // Function to calculate average mood for the week
   const calculateAverageMood = () => {

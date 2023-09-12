@@ -16,6 +16,8 @@ const LandingPage = () => {
     });
   };
 
+  const handleMood = false;
+
   const handleSubmit = () => {
     fetch('/api/selected-number', {
       method: 'POST',
