@@ -1,8 +1,8 @@
 const express = require('express');
 const mongoose = require('mongoose');
-const cors = require('cors'); // Import the cors package
+const cors = require('cors'); 
 const app = express();
-const path = require('path'); // Import the path module
+const path = require('path'); 
 const port = 5002;
 
 // Connect to MongoDB
@@ -105,7 +105,7 @@ app.get('/weekly-moods', async (req, res) => {
     const totalMood = weeklyMoodsData.reduce((acc, entry) => acc + parseInt(entry.number), 0);
     const averageMood = Math.round(totalMood / weeklyMoodsData.length);
 
-    // Add the average mood to the weeklyMoods object
+    // Add the average mood to the weeklyMoods 
     weeklyMoods['average'] = { number: averageMood };
 
     res.json(weeklyMoods);
