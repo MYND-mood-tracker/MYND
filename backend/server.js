@@ -109,6 +109,7 @@ app.get('/weekly-moods', async (req, res) => {
     weeklyMoods['average'] = { number: averageMood };
 
     const moodHandler = true;
+    const weeksOfTheMonth = 4;
 
     res.json(weeklyMoods);
   } catch (error) {
