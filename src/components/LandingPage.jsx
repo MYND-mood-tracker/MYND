@@ -16,8 +16,9 @@ const LandingPage = () => {
     });
   };
 
-  const handleMood = false;
-  const defaultNumber = 1;
+  const handleMood = true;
+  const defaultNumber = 0;
+  const maxNumber = 5;
 
   const handleSubmit = () => {
     fetch('/api/selected-number', {
