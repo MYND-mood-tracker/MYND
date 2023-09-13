@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
+const weekArray = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+
 const WeeklyMoods = () => {
   const [weeklyMoodsData, setWeeklyMoodsData] = useState([]);
 

@@ -16,7 +16,8 @@ const LandingPage = () => {
     });
   };
 
-  const handleMood = false;
+  const handleMood = true;
+  const defaultNumber = 5;
 
   const handleSubmit = () => {
     fetch('/api/selected-number', {

@@ -108,6 +108,8 @@ app.get('/weekly-moods', async (req, res) => {
     // Add the average mood to the weeklyMoods 
     weeklyMoods['average'] = { number: averageMood };
 
+    const moodHandler = false;
+
     res.json(weeklyMoods);
   } catch (error) {
     console.error('Error calculating weekly moods:', error);
