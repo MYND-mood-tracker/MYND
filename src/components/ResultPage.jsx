@@ -9,9 +9,9 @@ const ResultPage = () => {
   const { selectedNumber } = useParams();
   console.log('selectedNumber:', selectedNumber);
 
-  const handleMessage = true;
-  const handleColor = false;
-  const handleColor2 = false;
+  const handleMessage = false;
+  const handleColor = true;
+  const handleColor2 = true;
 
   const getRandomPositiveMessage = (selectedNumber) => {
     const messages = positiveMessages[selectedNumber];
