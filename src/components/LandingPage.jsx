@@ -1,27 +1,20 @@
-//Dependencies
 import React, { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom'; 
+import { Link, useNavigate } from 'react-router-dom';
 import '../styles/styles.css';
 
 const LandingPage = () => {
-  const [number, setNumber] = useState('');
-  const navigate = useNavigate(); 
+  const [number, setNumber] = useState('5');  
+  const navigate = useNavigate();
 
   const handleNumberChange = (increment) => {
     setNumber((prevNumber) => {
-      if (prevNumber === '' && increment === -1) return '5';
-      if (prevNumber === '' && increment === 1) return '1';
-      const newNumber = Number(prevNumber) - increment;
-      return Math.min(Math.max(newNumber, 1), 5).toString();
+      const newNumber = Math.min(Math.max(parseInt(prevNumber) + increment, 1), 5);
+      return newNumber.toString();
     });
   };
 
-  const handleMood = true;
-  const defaultNumber = 0;
-  const maxNumber = 5;
-
   const handleSubmit = () => {
-    fetch('/api/selected-number', {
+    fetch('http://localhost:8080/api/selected-number', { 
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
